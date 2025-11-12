@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发布商品 - 校园二手交易平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <i class="fas fa-recycle"></i>
+                校园二手交易
+            </h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>首页
+                </a>
+                <a href="profile.html" class="nav-link">
+                    <i class="fas fa-user"></i>个人中心
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="publish-container">
+                <div class="publish-card">
+                    <h2><i class="fas fa-plus-circle"></i> 发布二手商品</h2>
+                    <form id="publishForm" class="publish-form">
+                        <div class="form-group">
+                            <label for="productTitle"><i class="fas fa-tag"></i> 商品名称</label>
+                            <input type="text" id="productTitle" name="title" required placeholder="例如：Java编程思想">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="productPrice"><i class="fas fa-yuan-sign"></i> 价格</label>
+                            <input type="number" id="productPrice" name="price" step="0.01" required placeholder="0.00">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="productCategory"><i class="fas fa-list"></i> 分类</label>
+                            <select id="productCategory" name="category" required>
+                                <option value="">请选择分类</option>
+                                <option value="书籍">书籍</option>
+                                <option value="电子产品">电子产品</option>
+                                <option value="生活用品">生活用品</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="productDescription"><i class="fas fa-edit"></i> 商品描述</label>
+                            <textarea id="productDescription" name="description" rows="5" required placeholder="请详细描述商品的状况、使用情况等信息..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactInfo"><i class="fas fa-phone"></i> 联系方式</label>
+                            <input type="text" id="contactInfo" name="contact" required placeholder="请输入手机号或微信">
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="publish-btn">
+                                <i class="fas fa-paper-plane"></i> 发布商品
+                            </button>
+                            <button type="button" class="cancel-btn" onclick="window.history.back()">
+                                <i class="fas fa-times"></i> 取消
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/products.js"></script>
+</body>
+</html>
