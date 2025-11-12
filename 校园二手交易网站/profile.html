@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心 - 校园二手交易平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <i class="fas fa-recycle"></i>
+                校园二手交易
+            </h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>首页
+                </a>
+                <a href="publish.html" class="nav-link">
+                    <i class="fas fa-plus"></i>发布商品
+                </a>
+                <a href="login.html" class="nav-link">
+                    <i class="fas fa-sign-out-alt"></i>退出
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="profile-container">
+                <!-- 用户信息 -->
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="profile-info">
+                            <h2 id="userName">用户名</h2>
+                            <p id="userPhone">手机号：未设置</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 我的商品 -->
+                <div class="profile-card">
+                    <h3><i class="fas fa-box"></i> 我的商品</h3>
+                    <div class="my-products" id="myProducts">
+                        <!-- 我的商品列表通过JS动态生成 -->
+                    </div>
+                </div>
+
+                <!-- 快速操作 -->
+                <div class="profile-card">
+                    <h3><i class="fas fa-rocket"></i> 快速操作</h3>
+                    <div class="quick-actions">
+                        <a href="publish.html" class="action-btn">
+                            <i class="fas fa-plus"></i>
+                            <span>发布新商品</span>
+                        </a>
+                        <a href="index.html" class="action-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>浏览商品</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情 - 校园二手交易平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <i class="fas fa-recycle"></i>
+                校园二手交易
+            </h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>首页
+                </a>
+                <a href="publish.html" class="nav-link">
+                    <i class="fas fa-plus"></i>发布商品
+                </a>
+                <a href="login.html" class="nav-link">
+                    <i class="fas fa-user"></i>登录
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="detail-container">
+                <div class="detail-card">
+                    <div class="detail-image">
+                        <div class="product-image-large">
+                            <i class="fas fa-cube"></i>
+                            <div>商品图片</div>
+                        </div>
+                    </div>
+                    <div class="detail-info">
+                        <h1 id="productTitle">商品标题</h1>
+                        <div class="detail-price" id="productPrice">¥0.00</div>
+                        <div class="detail-category" id="productCategory">分类</div>
+                        
+                        <div class="detail-section">
+                            <h3><i class="fas fa-info-circle"></i> 商品描述</h3>
+                            <p id="productDescription">商品描述加载中...</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3><i class="fas fa-user"></i> 卖家信息</h3>
+                            <div class="seller-info">
+                                <div>联系方式: <span id="productContact">加载中...</span></div>
+                                <div>发布时间: <span id="publishTime">加载中...</span></div>
+                                <div>商品状态: <span id="productStatus">加载中...</span></div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-actions">
+                            <button class="contact-btn" onclick="contactSeller()">
+                                <i class="fas fa-phone"></i> 联系卖家
+                            </button>
+                            <button class="back-btn" onclick="window.history.back()">
+                                <i class="fas fa-arrow-left"></i> 返回
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/products.js"></script>
+</body>
+</html>
